@@ -1,0 +1,23 @@
+# General ignores
+*.log
+.DS_Store
+Thumbs.db
+
+# Node dependencies
+backend/node_modules/
+frontend/node_modules/
+
+# Build output
+backend/dist/
+frontend/dist/
+frontend/build/
+
+# Environment variables (IMPORTANT)
+backend/.env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# IDE/Editor specific
+.vscode/
+*.swp

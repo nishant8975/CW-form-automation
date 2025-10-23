@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* K.K. Wagh CW System Design System */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 20%;
+
+    /* Card Components */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    /* Popover Components */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Primary - K.K. Wagh Blue */
+    --primary: 201 100% 31%;
+    --primary-light: 201 100% 45%;
+    --primary-dark: 201 100% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 15% 20%;
+
+    /* Muted */
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent */
+    --accent: 201 90% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success */
+    --success: 142 76% 36%;
+    --success-light: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-light: 38 92% 60%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Danger/Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-light: 0 84% 70%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Info */
+    --info: 217 91% 60%;
+    --info-light: 217 91% 70%;
+    --info-foreground: 0 0% 100%;
+
+    /* Pending */
+    --pending: 38 92% 50%;
+    --pending-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 220 15% 88%;
+    --input: 220 15% 90%;
+    --ring: 201 100% 31%;
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(201 100% 31%), hsl(201 100% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-primary: 0 4px 14px 0 hsl(201 100% 31% / 0.25);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 10% 95%;
+
+    --primary: 201 100% 45%;
+    --primary-light: 201 100% 55%;
+    --primary-dark: 201 100% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 10% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 201 90% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 22%;
+    --ring: 201 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
